@@ -1,0 +1,23 @@
+.uni{
+    text-align: center;
+    background-color: rgba(13, 135, 95, 0.518) !important;
+    font-size: 25px !important;
+    padding: 10px !important;
+}
+.uni label{
+    padding: 10px;
+    
+}
+.uni input,select{
+    border-radius: 15px;
+    padding: 5px;
+}
+.uni button{
+    border-radius: 15px;
+    border: 5px solid green;
+    transition: all 1s ease;
+}
+.uni button:hover{
+    background-color: rgba(0, 94, 3, 0.588);
+    border: 5px dashed rgba(0, 0, 0, 0.783);
+}

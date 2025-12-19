@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% include "Nav.html" %}
+    <div>
+        <table class="table1">
+            <tr>
+                <th>Image</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Date of Birth</th>
+                <th>Gender</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        {% for a in formdata %}
+        <tr>
+            <td>
+                {% if a.file %}
+                <img src="{{ a.file.url }}" alt="" width="90px" height="120px">
+                {%  else %}
+                No Image 
+                {% endif %}
+            </td>
+            <td>{{a.fname}}</td>
+            <td>{{a.lname}}</td>
+            <td>{{a.dob}}</td>
+            <td>{{a.gender}}</td>
+            <td> <button class="views-btn"  ><a href="edit/{{a.id}}">Edit</a></button> </td>
+            <td> <button class="views-btn"  ><a href="delete/{{a.id}}">Delete</a></button> </td>
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+</body>
+</html>

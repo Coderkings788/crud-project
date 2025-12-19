@@ -1,0 +1,37 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <link rel="stylesheet" href="../static/css/form.css"> 
+</head>
+<body> -->
+    {% extends 'master.html' %}
+    {% block section %}
+    <div class="uni">
+         <form method="post" action="{{url}}">
+    {% csrf_token %}
+    
+    <label for="first_name">Edit First Name:</label>
+    <input type="text" id="first_name" name="first_name" placeholder="Edit first name" value="{{fname}}" required>
+    <br>
+    <label for="last_name">Edit Last Name:</label>
+    <input type="text" id="last_name" name="last_name" placeholder="Edit last name" value="{{lname}}" required>
+    <br>
+    <label for="dob">Edit Date of Birth:</label>
+    <input type="date" id="dob" name="dob" value="{{dob}}">
+    <br>
+    <label for="gender">Edit Gender:</label>
+    <label for="gender"  value="{{gender}}"></label>
+    <select id="gender" name="gender" required>
+        <option value="">Select Gender</option>
+        <option value="Male" {% if gender == "Male" %}selected{% endif %}>Male</option>
+        <option value="Female" {% if gender == "Female" %}selected{% endif %}>Female</option>
+
+    </select>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/form.css">
+</head>
+<body>
+    {% include "Nav.html" %}
+<div class="uni">
+         <form method="post" action="{% url 'form' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    
+    <label for="first_name">First Name:</label>
+    <input type="text" id="first_name" name="first_name" placeholder="Enter your first name" required>
+    <br>
+    <label for="last_name">Last Name:</label>
+    <input type="text" id="last_name" name="last_name" placeholder="Enter your last name" required>
+    <br>
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob">
+    <br>
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+        <option value="">Select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select>
+    <br>
+    <label for="file">Upload:</label>
+     <input type="file" name="image" id=""><br>
+    <button type="submit">Submit</button>
+</form>
+</div>
+</body>
+</html>

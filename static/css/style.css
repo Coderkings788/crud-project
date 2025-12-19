@@ -1,0 +1,47 @@
+.txt {
+  color: rgba(0, 196, 196, 0.378);
+  font-size: 50px;
+}
+.nav1 {
+  font-size: 28px;
+}
+.active {
+  font-weight: 600;
+  color: black;
+}
+.bg {
+  background-color: whitesmoke;
+}
+.table1 {
+  background-color: rgba(59, 200, 255, 0.562);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+}
+.table1 tr {
+  background-color: rgb(48, 191, 199);
+}
+.table1 tr {
+  border-bottom: 5px dashed black;
+}
+.table1 td {
+  background-color: rgba(30, 39, 220, 0.562);
+  padding: 10px;
+  transition: all 1.5s ease;
+}
+.table1 td:hover {
+  background-color: rgb(30, 214, 220);
+  color: black;
+  cursor: pointer;
+}
+.table1 td button{
+    border-radius: 10px;
+    border: 5px solid rgb(0, 179, 255);
+    
+}
+.table1 td button a{
+    color: black;
+    text-decoration: none;
+}
